@@ -27,6 +27,7 @@ public class InternDto {
     private Supervisor supervisor;
     private LocalDate targetDate;
     private String assignedWork;
+    private int state;
 
 
     public String getInternID() { return internID; }
@@ -71,12 +72,15 @@ public class InternDto {
     public String getAssignedWork() { return assignedWork; }
     public void setAssignedWork(String assignedWork) { this.assignedWork = assignedWork; }
 
+    public int getState() { return state; }
+    public void setState(int state) { this.state = state; }
+
 
 
     public InternDto(String internID, String name, String nic, String mobile, String email,
                      String address, String institute, LocalDate startDate, LocalDate endDate,
                      String specialization, String languages, Supervisor supervisor,
-                     LocalDate targetDate, String assignedWork) {
+                     LocalDate targetDate, String assignedWork, int state) {
         this.internID = internID;
         this.name = name;
         this.nic = nic;
@@ -91,6 +95,7 @@ public class InternDto {
         this.supervisor = supervisor;
         this.targetDate = targetDate;
         this.assignedWork = assignedWork;
+        this.state = state;
     }
 
     public InternDto() {}

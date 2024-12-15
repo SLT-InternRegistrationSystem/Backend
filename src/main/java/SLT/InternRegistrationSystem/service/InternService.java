@@ -14,4 +14,6 @@ public interface InternService {
     List<InternDto> getAllInterns();
 
     InternDto updateIntern(String internId, InternDto updatedIntern);
+
+    InternDto deleteIntern(String internId);
 }

@@ -19,7 +19,8 @@ public class InternMapper {
                 intern.getLanguages(),
                 intern.getSupervisor(),
                 intern.getTargetDate(),
-                intern.getAssignedWork()
+                intern.getAssignedWork(),
+                intern.getState()
         );
     }
 
@@ -38,7 +39,8 @@ public class InternMapper {
                 internDto.getLanguages(),
                 internDto.getSupervisor(),
                 internDto.getTargetDate(),
-                internDto.getAssignedWork()
+                internDto.getAssignedWork(),
+                internDto.getState()
         );
     }
 }

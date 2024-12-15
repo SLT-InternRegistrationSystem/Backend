@@ -38,6 +38,8 @@ public class Intern {
     private Supervisor supervisor;
     private LocalDate targetDate;
     private String assignedWork;
+    @Column(columnDefinition = "int default 1")
+    private int state;
 
 
 
@@ -83,12 +85,15 @@ public class Intern {
     public String getAssignedWork() { return assignedWork; }
     public void setAssignedWork(String assignedWork) { this.assignedWork = assignedWork; }
 
+    public int getState() { return state; }
+    public void setState(int state) { this.state = state; }
+
 
 
     public Intern(String internID, String name, String nic, String mobile, String email,
                   String address, String institute, LocalDate startDate, LocalDate endDate,
                   String specialization, String languages, Supervisor supervisor,
-                  LocalDate targetDate, String assignedWork) {
+                  LocalDate targetDate, String assignedWork, int state) {
         this.internID = internID;
         this.name = name;
         this.nic = nic;
@@ -103,6 +108,7 @@ public class Intern {
         this.supervisor = supervisor;
         this.targetDate = targetDate;
         this.assignedWork = assignedWork;
+        this.state = state;
     }
 
     public Intern() {}
