@@ -26,6 +26,7 @@ public class InternServiceImpl implements InternService {
     @Override
     public InternDto createIntern(InternDto internDto) {
         Intern intern = InternMapper.mapToIntern(internDto);
+        if (intern.getState() == 0) { intern.setState(1); }
         Intern savedIntern = internRepository.save(intern);
         return InternMapper.mapToInternDto(savedIntern);
     }
@@ -52,9 +53,30 @@ public class InternServiceImpl implements InternService {
                         new ResourceNotFoundException("Intern does not exist with the given id: " + internId));
 
         intern.setName(updatedIntern.getName());
-        //You have to add every information here
+        intern.setNic(updatedIntern.getNic());
+        intern.setMobile(updatedIntern.getMobile());
+        intern.setEmail(updatedIntern.getEmail());
+        intern.setAddress(updatedIntern.getAddress());
+        intern.setInstitute(updatedIntern.getInstitute());
+        intern.setStartDate(updatedIntern.getStartDate());
+        intern.setEndDate(updatedIntern.getEndDate());
+        intern.setSpecialization(updatedIntern.getSpecialization());
+        intern.setLanguages(updatedIntern.getLanguages());
+        intern.setSupervisor(updatedIntern.getSupervisor());
+        intern.setTargetDate(updatedIntern.getTargetDate());
+        intern.setAssignedWork(updatedIntern.getAssignedWork());
 
         Intern updatedInternObj = internRepository.save(intern);
         return InternMapper.mapToInternDto(updatedInternObj);
+    }
+
+    @Override
+    public InternDto deleteIntern(String internId) {
+        Intern intern = internRepository.findById(internId)
+                .orElseThrow(() ->
+                        new ResourceNotFoundException("Intern does not exist with the given id: " + internId));
+        intern.setState(0);
+        Intern deletedInternObj = internRepository.save(intern);
+        return InternMapper.mapToInternDto(deletedInternObj);
     }
 }
