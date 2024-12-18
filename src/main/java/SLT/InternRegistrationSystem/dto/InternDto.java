@@ -24,7 +24,7 @@ public class InternDto {
     private LocalDate endDate;
     private String specialization;
     private String languages;
-    private Supervisor supervisor;
+    private String supervisor;
     private LocalDate targetDate;
     private String assignedWork;
     private int state;
@@ -63,8 +63,8 @@ public class InternDto {
     public String getLanguages() { return languages; }
     public void setLanguages(String languages) { this.languages = languages; }
 
-    public Supervisor getSupervisor() { return supervisor; }
-    public void setSupervisor(Supervisor supervisor) { this.supervisor = supervisor; }
+    public String getSupervisor() { return supervisor; }
+    public void setSupervisor(String supervisor) { this.supervisor = supervisor; }
 
     public LocalDate getTargetDate() { return targetDate; }
     public void setTargetDate(LocalDate targetDate) { this.targetDate = targetDate; }
@@ -79,7 +79,7 @@ public class InternDto {
 
     public InternDto(String internID, String name, String nic, String mobile, String email,
                      String address, String institute, LocalDate startDate, LocalDate endDate,
-                     String specialization, String languages, Supervisor supervisor,
+                     String specialization, String languages, String supervisor,
                      LocalDate targetDate, String assignedWork, int state) {
         this.internID = internID;
         this.name = name;
