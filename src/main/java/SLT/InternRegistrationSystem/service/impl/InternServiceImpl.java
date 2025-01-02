@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-@AllArgsConstructor
+//@AllArgsConstructor
 public class InternServiceImpl implements InternService {
     private InternRepository internRepository;
 

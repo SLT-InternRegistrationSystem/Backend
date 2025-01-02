@@ -11,8 +11,8 @@ import java.time.LocalDate;
 
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
+//@NoArgsConstructor
+//@AllArgsConstructor
 @Entity
 @Table(name = "interns")
 public class Intern {

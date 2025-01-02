@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Map;
 
 @CrossOrigin("*")
-@AllArgsConstructor
+//@AllArgsConstructor
 @RestController
 @RequestMapping("/api/admins")
 public class AdminController {

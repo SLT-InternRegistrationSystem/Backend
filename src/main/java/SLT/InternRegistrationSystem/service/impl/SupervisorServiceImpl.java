@@ -1,9 +1,7 @@
 package SLT.InternRegistrationSystem.service.impl;
 
 import SLT.InternRegistrationSystem.dto.SupervisorDto;
-import SLT.InternRegistrationSystem.entity.Intern;
 import SLT.InternRegistrationSystem.entity.Supervisor;
-import SLT.InternRegistrationSystem.mapper.InternMapper;
 import SLT.InternRegistrationSystem.mapper.SupervisorMapper;
 import SLT.InternRegistrationSystem.repository.SupervisorRepository;
 import SLT.InternRegistrationSystem.service.SupervisorService;
@@ -15,7 +13,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-@AllArgsConstructor
+//@AllArgsConstructor
 public class SupervisorServiceImpl implements SupervisorService {
     private SupervisorRepository supervisorRepository;
 
