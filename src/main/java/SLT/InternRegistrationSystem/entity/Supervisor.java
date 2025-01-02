@@ -14,8 +14,8 @@ import org.hibernate.annotations.GenericGenerator;
 
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
+//@NoArgsConstructor
+//@AllArgsConstructor
 @Entity
 @Table(name = "supervisors")
 public class Supervisor {
